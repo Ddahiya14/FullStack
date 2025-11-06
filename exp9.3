@@ -1,0 +1,19 @@
+const express = require("express");
+const app = express();
+
+app.get("/", (req, res) => {
+  res.send("Backend API working — from EC2 instance!");
+});
+
+app.listen(5000, () => console.log("Server running on port 5000"));
+{
+  "name": "aws-backend",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
